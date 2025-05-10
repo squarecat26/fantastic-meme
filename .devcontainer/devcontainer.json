@@ -1,0 +1,21 @@
+{
+  "name": "Python ML Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10", // Imagen base con Python
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter" // Útil si prefieres usar notebooks
+      ]
+    }
+  },
+  "postCreateCommand": "pip install --no-cache-dir pandas numpy scikit-learn tensorflow transformers" // Comando para instalar las librerías después de crear el entorno
+  // Nota: La configuración de GPU se elige al crear la instancia, no principalmente aquí.
+  // TensorFlow instalado aquí intentará usar la GPU si está disponible.
+}
