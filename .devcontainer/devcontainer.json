@@ -15,6 +15,7 @@
       ]
     }
   },
-  "postCreateCommand": "pip install --no-cache-dir pandas numpy scikit-learn tensorflow transformers",
+
+  "postCreateCommand": "pip install --no-cache-dir pandas numpy scikit-learn tensorflow transformers tf-keras",
   "remoteUser": "codespace"
 }
